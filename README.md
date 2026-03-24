@@ -1,20 +1,24 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Trayecto Gasista Domiciliario 2026 🔧🔥
 
-# Run and deploy your AI Studio app
+Este es el repositorio oficial de la plataforma educativa para el **Trayecto de Formación en Instalaciones de Gas Domiciliario**. El sitio está diseñado para centralizar recursos, materiales técnicos y normativas para los alumnos en formación.
 
-This contains everything you need to run your app locally.
+🚀 **Sitio en vivo:** [https://trayecto-gasista-2026.netlify.app/](https://trayecto-gasista-2026.netlify.app/)
 
-View your app in AI Studio: https://ai.studio/apps/a6a78553-18d5-4f2a-9b9c-2603c4a726df
+## 📝 Descripción
+La plataforma funciona como un nexo digital para los estudiantes, permitiendo el acceso rápido a la bibliografía oficial, guías de clases y herramientas de consulta sobre el oficio de gasista matriculado.
 
-## Run Locally
+## 🛠️ Tecnologías Utilizadas
+Este proyecto fue desarrollado utilizando un stack moderno para garantizar velocidad y una excelente experiencia de usuario:
+* **React 18** - Librería de JavaScript para la interfaz.
+* **Vite** - Herramienta de construcción (Build tool) ultra rápida.
+* **TypeScript** - Para un desarrollo con tipado seguro.
+* **Netlify** - Hosting y despliegue continuo.
 
-**Prerequisites:**  Node.js
+## 📁 Estructura del Proyecto
+* `/src`: Contiene los componentes, páginas y lógica de la aplicación.
+* `/public`: Almacena recursos estáticos y el archivo de redirecciones para el routing en Netlify.
+* `dist/`: Carpeta generada automáticamente con el código optimizado para producción.
 
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+
+
