@@ -1,0 +1,102 @@
+:root {
+  --color-primary: #4FC3F7;
+  --color-secondary: #FFB300;
+  --color-tertiary: #FF7043;
+  --color-quaternary: #4DB6AC;
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* Custom Utilities */
+.bg-primary-custom { background-color: var(--color-primary) !important; color: #fff; }
+.bg-secondary-custom { background-color: var(--color-secondary) !important; color: #fff; }
+.bg-tertiary-custom { background-color: var(--color-tertiary) !important; color: #fff; }
+.bg-quaternary-custom { background-color: var(--color-quaternary) !important; color: #fff; }
+
+.text-primary-custom { color: var(--color-primary) !important; }
+.text-secondary-custom { color: var(--color-secondary) !important; }
+.text-tertiary-custom { color: var(--color-tertiary) !important; }
+.text-quaternary-custom { color: var(--color-quaternary) !important; }
+
+.btn-primary-custom {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #fff;
+}
+.btn-primary-custom:hover {
+  background-color: #29b6f6;
+  border-color: #29b6f6;
+  color: #fff;
+}
+
+.btn-secondary-custom {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: #fff;
+}
+.btn-secondary-custom:hover {
+  background-color: #ffa000;
+  border-color: #ffa000;
+  color: #fff;
+}
+
+.hover-primary:hover {
+  color: var(--color-primary) !important;
+}
+
+/* Hero Section */
+.hero-jumbotron {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(src/assets/images/cabecera.png);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 120px 0;
+}
+
+/* Quick Links */
+.quick-link-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  border: none;
+  border-radius: 10px;
+}
+.quick-link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Class Card */
+.class-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+  height: 100%;
+}
+.class-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+.class-card .card-footer {
+  background-color: transparent;
+  border-top: 1px solid var(--bs-border-color);
+}
+.icon-row i {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #6c757d;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.icon-row i:hover {
+  color: var(--color-primary);
+}
