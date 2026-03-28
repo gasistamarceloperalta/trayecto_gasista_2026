@@ -23,6 +23,22 @@ export default function ModulePage() {
   // Generar 16 clases para el módulo
   const classes = Array.from({ length: 16 }, (_, i) => i + 1);
 
+  const getModule1ClassDate = (classNum) => {
+    const dates = {
+      1: '09 de marzo del 2026',
+      2: '10 de marzo del 2026',
+      3: '11 de marzo del 2026',
+      4: '12 de marzo del 2026',
+      5: '16 de marzo del 2026',
+      6: '17 de marzo del 2026',
+      7: '18 de marzo del 2026',
+      8: '19 de marzo del 2026',
+      9: '25 de marzo del 2026',
+      10: '26 de marzo del 2026',
+    };
+    return dates[classNum] ? `Clase ${classNum} dictada el dia ${dates[classNum]}` : null;
+  };
+
   return (
     <div className="container py-5">
       <nav aria-label="breadcrumb" className="mb-4">
@@ -52,7 +68,9 @@ export default function ModulePage() {
                 </div>
                 <h5 className="card-title fw-bold mb-2">Clase {classNum}</h5>
                 <p className="card-text text-muted small mb-4 flex-grow-1">
-                  Contenido, material teórico y práctico de la clase {classNum}.
+                  {moduleId === '1' && getModule1ClassDate(classNum)
+                    ? getModule1ClassDate(classNum)
+                    : `Contenido, material teórico y práctico de la clase ${classNum}.`}
                 </p>
                 <Link to={`/module/${moduleId}/class/${classNum}`} className="btn btn-primary-custom w-100 rounded-pill fw-semibold">
                   Ingresar a la Clase
