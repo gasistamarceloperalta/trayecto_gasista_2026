@@ -35,6 +35,8 @@ export default function ModulePage() {
       8: '19 de marzo del 2026',
       9: '25 de marzo del 2026',
       10: '26 de marzo del 2026',
+      11: '30 de marzo del 2026',
+      12: '31 de marzo del 2026',
     };
     return dates[classNum] ? `Clase ${classNum} dictada el dia ${dates[classNum]}` : null;
   };

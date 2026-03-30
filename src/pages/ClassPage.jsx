@@ -11,6 +11,7 @@ import Module1Class7 from './Module1Class7';
 import Module1Class8 from './Module1Class8';
 import Module1Class9 from './Module1Class9';
 import Module1Class10 from './Module1Class10';
+import Module1Class11 from './Module1Class11';
 
 export default function ClassPage() {
   const { moduleId, classId } = useParams();
@@ -40,6 +41,7 @@ export default function ClassPage() {
   const isModule1Class8 = moduleId === '1' && classId === '8';
   const isModule1Class9 = moduleId === '1' && classId === '9';
   const isModule1Class10 = moduleId === '1' && classId === '10';
+  const isModule1Class11 = moduleId === '1' && classId === '11';
 
   return (
     <div className="container py-5">
@@ -85,6 +87,8 @@ export default function ClassPage() {
         <Module1Class9 />
          ) : isModule1Class10 ? (
         <Module1Class10 />
+         ) : isModule1Class11 ? (
+        <Module1Class11 />
       ) : (
         <>
           {/* Marco Teórico */}
