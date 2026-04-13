@@ -47,6 +47,7 @@ const getClassDate = (modId, classNum) => {
         1: '07 de abril del 2026',
         2: '08 de abril del 2026',
         3: '09 de abril del 2026',
+        4: '13 de abril del 2026',
       };
       return dates[classNum] ? `Clase ${classNum} dictada el día ${dates[classNum]}` : null;
     }

@@ -18,6 +18,7 @@ import Module1Class14 from './Module1Class14';
 import Module2Class1 from './Module2Class1';
 import Module2Class2 from './Module2Class2';
 import Module2Class3 from './Module2Class3';
+import Module2Class4 from './Module2Class4';
 
 
 
@@ -58,6 +59,7 @@ export default function ClassPage() {
   const isModule2Class1 = moduleId === '2' && classId === '1';
   const isModule2Class2 = moduleId === '2' && classId === '2';
   const isModule2Class3 = moduleId === '2' && classId === '3';
+  const isModule2Class4 = moduleId === '2' && classId === '4';
    
 
   return (
@@ -118,6 +120,8 @@ export default function ClassPage() {
         <Module2Class2 />
         ) : isModule2Class3 ? (
         <Module2Class3 />
+        ) : isModule2Class4 ? (
+        <Module2Class4 />
       ) : (
         <>
           {/* Marco Teórico */}
