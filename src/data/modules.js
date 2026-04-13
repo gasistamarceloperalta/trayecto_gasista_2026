@@ -20,7 +20,7 @@ export const modulesData = [
     description: 'Desarrollo de habilidades interpersonales, ética profesional y gestión laboral.',
     image: foto2,
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    disabled: true
+    disabled: false
   },
   {
     id: 3,

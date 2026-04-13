@@ -12,6 +12,15 @@ import Module1Class8 from './Module1Class8';
 import Module1Class9 from './Module1Class9';
 import Module1Class10 from './Module1Class10';
 import Module1Class11 from './Module1Class11';
+import Module1Class12 from './Module1Class12';
+import Module1Class13 from './Module1Class13';
+import Module1Class14 from './Module1Class14';
+import Module2Class1 from './Module2Class1';
+import Module2Class2 from './Module2Class2';
+import Module2Class3 from './Module2Class3';
+
+
+
 
 export default function ClassPage() {
   const { moduleId, classId } = useParams();
@@ -22,7 +31,8 @@ export default function ClassPage() {
     window.scrollTo(0, 0);
   }, []);
 
-  if (!moduleInfo) {
+  
+  if (!moduleInfo || (moduleId === '1' && parseInt(classId) > 14)) {
     return (
       <div className="container py-5 text-center">
         <h2 className="display-6 text-muted">Clase no encontrada</h2>
@@ -42,6 +52,13 @@ export default function ClassPage() {
   const isModule1Class9 = moduleId === '1' && classId === '9';
   const isModule1Class10 = moduleId === '1' && classId === '10';
   const isModule1Class11 = moduleId === '1' && classId === '11';
+  const isModule1Class12 = moduleId === '1' && classId === '12';
+  const isModule1Class13 = moduleId === '1' && classId === '13';
+  const isModule1Class14 = moduleId === '1' && classId === '14';
+  const isModule2Class1 = moduleId === '2' && classId === '1';
+  const isModule2Class2 = moduleId === '2' && classId === '2';
+  const isModule2Class3 = moduleId === '2' && classId === '3';
+   
 
   return (
     <div className="container py-5">
@@ -89,6 +106,18 @@ export default function ClassPage() {
         <Module1Class10 />
          ) : isModule1Class11 ? (
         <Module1Class11 />
+        ) : isModule1Class12 ? (
+        <Module1Class12 />
+        ) : isModule1Class13 ? (
+        <Module1Class13 />
+        ) : isModule1Class14 ? (
+        <Module1Class14 />
+        ) : isModule2Class1 ? (
+        <Module2Class1 />
+         ) : isModule2Class2 ? (
+        <Module2Class2 />
+        ) : isModule2Class3 ? (
+        <Module2Class3 />
       ) : (
         <>
           {/* Marco Teórico */}

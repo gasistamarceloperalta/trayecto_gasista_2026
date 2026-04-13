@@ -20,27 +20,38 @@ export default function ModulePage() {
     );
   }
 
-  // Generar 16 clases para el módulo
-  const classes = Array.from({ length: 16 }, (_, i) => i + 1);
-
-  const getModule1ClassDate = (classNum) => {
-    const dates = {
-      1: '09 de marzo del 2026',
-      2: '10 de marzo del 2026',
-      3: '11 de marzo del 2026',
-      4: '12 de marzo del 2026',
-      5: '16 de marzo del 2026',
-      6: '17 de marzo del 2026',
-      7: '18 de marzo del 2026',
-      8: '19 de marzo del 2026',
-      9: '25 de marzo del 2026',
-      10: '26 de marzo del 2026',
-      11: '30 de marzo del 2026',
-      12: '31 de marzo del 2026',
-    };
-    return dates[classNum] ? `Clase ${classNum} dictada el dia ${dates[classNum]}` : null;
+   // Generar clases para el módulo (14 para el módulo 1, 16 para los demás)
+  const classes = Array.from({ length: moduleId === '1' ? 14 : 16 }, (_, i) => i + 1);
+const getClassDate = (modId, classNum) => {
+    if (modId === '1') {
+      const dates = {
+        1: '09 de marzo del 2026',
+        2: '10 de marzo del 2026',
+        3: '11 de marzo del 2026',
+        4: '12 de marzo del 2026',
+        5: '16 de marzo del 2026',
+        6: '17 de marzo del 2026',
+        7: '18 de marzo del 2026',
+        8: '19 de marzo del 2026',
+        9: '25 de marzo del 2026',
+        10: '26 de marzo del 2026',
+        11: '30 de marzo del 2026',
+        12: '31 de marzo del 2026',
+        13: '01 de abril del 2026',
+        14: '06 de abril del 2026',
+      };
+      return dates[classNum] ? `Clase ${classNum} dictada el dia ${dates[classNum]}` : null;
+    }
+    if (modId === '2') {
+      const dates = {
+        1: '07 de abril del 2026',
+        2: '08 de abril del 2026',
+        3: '09 de abril del 2026',
+      };
+      return dates[classNum] ? `Clase ${classNum} dictada el día ${dates[classNum]}` : null;
+    }
+    return null;
   };
-
   return (
     <div className="container py-5">
       <nav aria-label="breadcrumb" className="mb-4">
@@ -70,8 +81,8 @@ export default function ModulePage() {
                 </div>
                 <h5 className="card-title fw-bold mb-2">Clase {classNum}</h5>
                 <p className="card-text text-muted small mb-4 flex-grow-1">
-                  {moduleId === '1' && getModule1ClassDate(classNum)
-                    ? getModule1ClassDate(classNum)
+                  {getClassDate(moduleId, classNum)
+                    ? getClassDate(moduleId, classNum)
                     : `Contenido, material teórico y práctico de la clase ${classNum}.`}
                 </p>
                 <Link to={`/module/${moduleId}/class/${classNum}`} className="btn btn-primary-custom w-100 rounded-pill fw-semibold">
