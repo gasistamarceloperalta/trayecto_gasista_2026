@@ -20,8 +20,8 @@ export default function ModulePage() {
     );
   }
 
-   // Generar clases para el módulo (14 para el módulo 1, 16 para los demás)
-  const classes = Array.from({ length: moduleId === '1' ? 14 : 16 }, (_, i) => i + 1);
+ // Generar clases para el módulo (14 para el módulo 1, 6 para el módulo 2, 16 para los demás)
+  const classes = Array.from({ length: moduleId === '1' ? 14 : moduleId === '2' ? 6 : 16 }, (_, i) => i + 1);
 const getClassDate = (modId, classNum) => {
     if (modId === '1') {
       const dates = {
@@ -48,6 +48,14 @@ const getClassDate = (modId, classNum) => {
         2: '08 de abril del 2026',
         3: '09 de abril del 2026',
         4: '13 de abril del 2026',
+        5: '14 de abril del 2026',
+        6: '15 de abril del 2026',
+      };
+      return dates[classNum] ? `Clase ${classNum} dictada el día ${dates[classNum]}` : null;
+    }
+        if (modId === '3') {
+      const dates = {
+        1: '16 de abril del 2026',
       };
       return dates[classNum] ? `Clase ${classNum} dictada el día ${dates[classNum]}` : null;
     }

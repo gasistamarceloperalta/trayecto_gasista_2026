@@ -19,6 +19,9 @@ import Module2Class1 from './Module2Class1';
 import Module2Class2 from './Module2Class2';
 import Module2Class3 from './Module2Class3';
 import Module2Class4 from './Module2Class4';
+import Module2Class5 from './Module2Class5';
+import Module2Class6 from './Module2Class6';
+import Module3Class1 from './Module3Class1';
 
 
 
@@ -33,7 +36,7 @@ export default function ClassPage() {
   }, []);
 
   
-  if (!moduleInfo || (moduleId === '1' && parseInt(classId) > 14)) {
+   if (!moduleInfo || (moduleId === '1' && parseInt(classId) > 14) || (moduleId === '2' && parseInt(classId) > 6)) {
     return (
       <div className="container py-5 text-center">
         <h2 className="display-6 text-muted">Clase no encontrada</h2>
@@ -60,6 +63,10 @@ export default function ClassPage() {
   const isModule2Class2 = moduleId === '2' && classId === '2';
   const isModule2Class3 = moduleId === '2' && classId === '3';
   const isModule2Class4 = moduleId === '2' && classId === '4';
+  const isModule2Class5 = moduleId === '2' && classId === '5';
+  const isModule2Class6 = moduleId === '2' && classId === '6';
+  const isModule3Class1 = moduleId === '3' && classId === '1';
+  
    
 
   return (
@@ -122,6 +129,12 @@ export default function ClassPage() {
         <Module2Class3 />
         ) : isModule2Class4 ? (
         <Module2Class4 />
+        ) : isModule2Class5 ? (
+        <Module2Class5 />
+        ) : isModule2Class6 ? (
+        <Module2Class6 />
+        ) : isModule3Class1 ? (
+        <Module3Class1 />
       ) : (
         <>
           {/* Marco Teórico */}

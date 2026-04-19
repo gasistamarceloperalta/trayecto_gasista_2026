@@ -28,7 +28,7 @@ export const modulesData = [
     description: 'Estudio de los materiales, herramientas y tecnologías aplicadas al gas.',
     image: foto3,
     videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
-    disabled: true
+    disabled: false
   },
   {
     id: 4,
